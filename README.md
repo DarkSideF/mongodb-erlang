@@ -9,14 +9,19 @@ This driver is implemented as an Erlang application named *mongodb*. It depends 
 Download and compile each application
 
 	$ git clone git://github.com/TonyGen/bson-erlang.git bson
-	$ git clone git://github.com/TonyGen/mongodb-erlang.git mongodb
+	$ git clone git://github.com/DarkSideF/mongodb-erlang.git mongodb
 	$ cd bson
 	$ erlc -o ebin -I include src/*.erl
 	$ cd ../mongodb
 	$ erlc -o ebin -I include -I .. src/*.erl
 	$ cd ..
 
-Then install them in your standard Erlang library location or include them in your path on startup
+Then install them in your standard Erlang library location 
+
+	$ sudo cp -rf bson /usr/lib/erlang/lib/bson-0.1.3
+	$ sudo cp -rf mongodb /usr/lib/erlang/lib/mongodb-0.3.1
+
+or include them in your path on startup
 
 	$ erl -pa bson/ebin mongodb/ebin
 
